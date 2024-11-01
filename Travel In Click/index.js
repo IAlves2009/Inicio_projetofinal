@@ -1,3 +1,5 @@
+const url_card = "https://bora-14220-default-rtdb.firebaseio.com/user";
+
 var map = L.map('map').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -45,3 +47,17 @@ var popup = L.popup()
     }
     
     map.on('click', onMapClick);
+
+fetch(url_card+".json").then(resposta => resposta.json())
+.then(dados =>{
+    for (const key in dados) {
+        (dados[key].predio).forEach(element => {
+            let rua = predio.rua
+            let bairro = predio.bairro
+            let numero = predio.numero
+            let nome = predio.nome
+            let tipo = predio.tipo
+            const= rua+''+bairro+''+numero+nome+''+tipo
+        });
+    }
+})
