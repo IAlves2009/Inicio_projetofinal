@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stlo/inter_user.css">
+</head>
+<body>
+    <div class="content">
+        <div class="row user">
+            <span >
+            <p id="usuarionome"></p>
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Configuração
+                </a>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" >Altera conta</button></li>
+                    <li><button class="dropdown-item" >deleta conta</button></li>
+                </ul>
+              </div>
+            <button type="button" class="btn btn-primary">ajuda</button>
+            <button type="button" id="offpg" class="btn btn-warning">lgaut</button>
+        </span>
+        </div>
+        <div class="row predios">
+            <span id ="mapas">
+            </span>
+            <button type="button" id="formulario" class="btn btn-primary prebt" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Adicionar local
+              </button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input class="form-control form-control-lg" id="nome" type="text" placeholder="nome do estabelecimento" aria-label=".form-control-lg example">
+                        <input class="form-control form-control-lg" id="img" type="text" placeholder="url da iamgem" aria-label=".form-control-lg example">
+                        <input class="form-control form-control-lg" id="cep" type="number" placeholder="cep" aria-label=".form-control-lg example">
+                        <input class="form-control form-control-lg" id="descricao" type="text" placeholder="descrião" aria-label=".form-control-lg example">
+                        <input class="form-control form-control-lg" id="casa_nu" type="number" placeholder="Numero da casa" aria-label=".form-control-lg example">
+                        <select id="tipo" class="form-select" aria-label="Default select example">
+                            <option selected>tipo de estabelecimento</option>
+                            <option value="estaurante">restaurante</option>
+                            <option value="mercado">mercado</option>
+                            <option value="hospital">hospital</option>
+                          </select>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" id="adiciona_predio"  class="btn btn-secondary" data-bs-dismiss="modal">Salvar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>  
+        <div class="row">
+          <div id="piechart" style="width: 900px; height: 500px;"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="/jsss/user.js"></script>
+</body>
+</html>

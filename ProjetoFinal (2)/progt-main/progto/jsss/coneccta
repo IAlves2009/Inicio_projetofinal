@@ -1,0 +1,26 @@
+const url_cad = "https://bora-14220-default-rtdb.firebaseio.com/";
+
+conecta.addEventListener("click",e=>{
+    let senha = document.getElementById('senha');
+    let email = document.getElementById('email');
+    fetch(url_cad+'user.json')
+    .then(resposta =>resposta.json())
+    .then(dados =>{
+        console.log(senha.value)
+        console.log((email.value).toUpperCase())
+        let controle =""
+        for (const key in dados) {
+           if((dados[key].email== (email.value).toUpperCase())&&(dados[key].senha==senha.value)){
+                localStorage.setItem('chave',key);
+                window.location.href="http://127.0.0.1:5500/ht/usuario.html";
+           }else{
+            controle = 1;
+           }
+           if(controle ==1){
+                senha.value ="";
+                email.value ="";
+                console.log("erro")
+           }
+        }
+    })
+})

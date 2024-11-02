@@ -1,0 +1,21 @@
+#map {
+    width: 1200px;
+    height: 765px;
+    float: right;
+}
+
+#menu{
+    width: 365px;
+    height: 765px;
+    float: left;
+    background-color: rgba(255, 0, 0, 0.685);
+}
+
+.btn_menu{
+    width: 365px;
+    height: 75px;
+    background-color: rgba(255, 223, 223, 0.788);
+    font-size: 50px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+}
+

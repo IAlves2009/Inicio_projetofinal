@@ -1,0 +1,20 @@
+.content{
+    border-radius: 10px;
+    margin: 5% 10% 5% 10%;
+    background-color: aliceblue;
+}
+body{
+    background-color: aqua;
+}
+.row{
+    margin-top: 2%;
+}
+
+.esconde{
+    display: none;
+}
+.aparec{
+    text-decoration-color: red;
+    border: solid 3px red;
+    border-radius: 4px;
+}
